@@ -1,7 +1,8 @@
 (ns choice.content
-  (:require [choice.domain.github :as github]
-            [choice.domain.youtube :as youtube]
-            [goog.uri.utils  :refer [getDomain]]))
+  (:require [goog.uri.utils  :refer [getDomain]]
+            [choice.domain.github :as github]
+            [choice.domain.thes :as thes]
+            [choice.domain.youtube :as youtube]))
 
 
 (defn init
@@ -15,7 +16,11 @@
   (when (= "youtube.com" (getDomain js/location.href))
     (do
       (youtube/mount)
-      (prn "mounted youtube"))))
+      (prn "mounted youtube")))
+  (when (= "www.thesaurus.com" (getDomain js/location.href))
+    (do
+      (thes/mount)
+      (prn "mounted thesaurus"))))
 
 
 (comment

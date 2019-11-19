@@ -32,4 +32,5 @@
 - create github issues from ext interface
 - backup your settings/code (maybe a github repo)
 - versions as dates
+- domains of interest : google youtube github thesaurus twitter chrome(user icon) stackoverflow
 

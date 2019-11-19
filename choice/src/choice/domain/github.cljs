@@ -1,6 +1,7 @@
 (ns choice.domain.github
   (:require [goog.dom :as dom]
-            [goog.style :as style]))
+            [goog.style :as style]
+            [choice.core :refer [set-display select-element]]))
 
 
 (def -conf
@@ -41,36 +42,12 @@
   ;
   )
 
-(defn select-element
-  [v]
-  (js/document.querySelector v))
-
-(defn set-element-display
-  [el v]
-  (style/setStyle el #js {:display v}))
-
-(defn set-display
-  [selector-key v]
-  (->
-   (select-element (-conf selector-key))
-   (set-element-display v)))
-
-#_(select-element (-conf :github.element.selector/dashboard))
-#_(set-display   "none")
-
-#_(set-display (dom/getElement (-conf :github.element.id/dashboard))  "none")
-#_(set-display (dom/getElement (-conf :github.element.id/dashboard)) "initial")
-#_(set-display :github.element.selector/dashboard "none")
-#_(set-display :github.element.selector/dashboard "initial")
-#_(set-display :github.element.selector/explore "none")
-#_(set-display :github.element.selector/explore "initial")
-
 
 (defn mount
   []
   (do
-    (set-display :github.element.selector/dashboard "none")
-    (set-display :github.element.selector/explore "none")))
+    (set-display (-conf :github.element.selector/dashboard) "none")
+    (set-display (-conf :github.element.selector/explore) "none")))
 
 (defn unmount
   []
