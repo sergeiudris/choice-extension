@@ -1,7 +1,6 @@
 (ns choice.inject)
 
-(defn init
+(defn main
   []
-  (prn "choice.inject.init"))
+  (prn "choice.inject.main"))
 
-(println ::loaded)

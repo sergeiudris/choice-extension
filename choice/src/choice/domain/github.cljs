@@ -13,7 +13,6 @@
 
 (comment
 
-  (init)
   (js/console.log 3)
 
   (dom/getElement "body")

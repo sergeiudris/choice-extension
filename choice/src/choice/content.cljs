@@ -5,9 +5,9 @@
             [choice.domain.youtube :as youtube]))
 
 
-(defn init
+(defn main
   []
-  (prn "choice.content.init")
+  (prn "choice.content.main")
   (prn "domain is " (getDomain js/location.href))
   
   (when (= "github.com" (getDomain js/location.href))

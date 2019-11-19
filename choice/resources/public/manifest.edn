@@ -6,18 +6,21 @@
  :shadow/outputs
  {:inject
   {:output-type :chrome/single-file
-   :init-fn choice.inject/init}
+   :init-fn choice.inject/main}
 
-  :browser-action
-  {:init-fn choice.action/init}
+  ; :browser-action
+  ; {:init-fn choice.action/init}
+  :action
+  {:output-type :chrome/single-file
+   :init-fn choice.action/main}
 
   :content-script
-  {:init-fn choice.content/init
+  {:init-fn choice.content/main
    :chrome/options {:matches ["<all_urls>"] #_["http://localhost:*/*"]
                     :run-at "document_idle"}}
 
   :background
-  {:init-fn choice.bg/init}}
+  {:init-fn choice.bg/main}}
 
  :browser-action
  {:default-title "choice"

@@ -4,8 +4,9 @@ shadow(){
     ./node_modules/.bin/shadow-cljs "$@"
 }
 
-prod(){
+release(){
     npm i
+    rm -rf resources/public/out resources/public/manifest.json 
     shadow -A:shadow:core:prod release ext
 }
 
