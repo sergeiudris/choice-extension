@@ -1,31 +1,41 @@
 (ns choice.domain.youtube
   (:require [goog.dom :as dom]
-            [goog.style :as style]))
+            [goog.style :as style]
+            [choice.core :refer [set-display select-element]]))
+
+(def -conf
+  {;top ad
+   :youtube.element.selector/top-ad "#masthead-ad"
+   ; right ad
+   :youtube.element.selector/recommended "[page-subtype=\"home\"]"})
+
+(comment
+
+
+  (select-element (-conf :youtube.element.selector/top-ad))
+  (js/document.querySelector "#masthead-ad")
+  (js/document.querySelector ".css-jj611e")
+  (def recom (js/document.querySelector "[page-subtype=\"home\"]"))
+
+
+
+  (set-display (-conf :thes.element.selector/top-ad) "none")
+  (set-display (-conf :thes.element.selector/top-ad) "initial")
+  (set-display (-conf :thes.element.selector/right-ad) "none")
+  (set-display (-conf :thes.element.selector/right-ad) "initial")
+
+  ;
+  )
+
 
 
 (defn mount
   []
-  (let [el (-> (dom/getElementsByTagName "body") (aget 0))]
-    (style/setStyle el #js {:display "none"})))
+  (do
+    (set-display (-conf :youtube.element.selector/top-ad) "none")
+    (set-display (-conf :youtube.element.selector/recommended) "none")))
 
 (defn unmount
   []
   (prn "unmounted"))
 
-
-(comment
-
-  (init)
-  (js/console.log 3)
-
-  (dom/getElement "body")
-  (-> (dom/getElementsByTagName "body") (js/console.log))
-  (def el (-> (dom/getElementsByTagName "body") (aget 0)))
-  (style/setStyle el #js {:display "none"})
-  (js/console.log #js {:display "none"})
-
-
-
-
-  ;
-  )

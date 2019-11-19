@@ -9,14 +9,17 @@
   []
   (prn "choice.content.init")
   (prn "domain is " (getDomain js/location.href))
+  
   (when (= "github.com" (getDomain js/location.href))
     (do
       (github/mount)
       (prn "mounted github")))
-  (when (= "youtube.com" (getDomain js/location.href))
+  
+  (when (= "www.youtube.com" (getDomain js/location.href))
     (do
       (youtube/mount)
       (prn "mounted youtube")))
+  
   (when (= "www.thesaurus.com" (getDomain js/location.href))
     (do
       (thes/mount)
