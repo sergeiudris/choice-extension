@@ -1,0 +1,36 @@
+{:name "choice"
+ :version "0.1.0"
+ :description "hide unwanted page elements for certain domains"
+ :manifest-version 2
+
+ :shadow/outputs
+ {:inject
+  {:output-type :chrome/single-file
+   :init-fn choice.inject/init}
+
+  :browser-action
+  {:init-fn choice.action/init}
+
+  :content-script
+  {:init-fn choice.content/init
+   :chrome/options {:matches ["<all_urls>"] #_["http://localhost:*/*"]
+                    :run-at "document_idle"}}
+
+  :background
+  {:init-fn choice.bg/init}}
+
+ :browser-action
+ {:default-title "choice"
+  :default-icon "icon.png"
+  :default-popup "action.html"}
+
+ :content-security-policy
+ ["default-src 'self';"
+  ;; FIXME: unsafe-eval should be injected for dev, user shouldn't have to write this
+  "script-src 'self' 'unsafe-eval' http://localhost:9630;"
+  "connect-src * data: blob: filesystem:;"
+  "style-src 'self' data: chrome-extension-resource: 'unsafe-inline';"
+  "img-src 'self' data: chrome-extension-resource:;"
+  "frame-src 'self' data: chrome-extension-resource:;"
+  "font-src 'self' data: chrome-extension-resource:;"
+  "media-src * data: blob: filesystem:;"]}
