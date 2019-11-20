@@ -2,7 +2,7 @@
 - choice is intended to give the user a level of control over webpage content of certain domains
 - as a baseline, ability to hide unwanted page elements
 
-## ratiaonle
+## rationale
 
 - it's been a long itch of mine to hide distructing elements on certain domains
 - there are extensions specific to domains (google doodle blocker, youtube hide recommends etc.)
