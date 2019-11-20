@@ -4,14 +4,14 @@
 
 ## rationale
 
-- it's been a long itch of mine to hide distructing elements on certain domains
+- it's been a long time itch of mine to hide distructing elements on certain domains
 - there are extensions specific to domains (google doodle blocker, youtube hide recommends etc.)
-- still seems there is no extension that would let you choose what is displayed for multiple domains (google,youtube, github, twitter, medium, stackoverflow etc.)
-- 'distruction free youtube' extension is not open source and asks access for browsing history (maybe it's for a reason, but I'm reluctunt to install) 
-- and in general: web services change their UI, new services appear; it a human  and  professional necessity for me to have a content-clearing tool
+- still it seems there is no multi-domain extension that would let you choose what is displayed (google,youtube, github, twitter, medium, stackoverflow etc.)
+- 'distruction free youtube' extension is not open source and asks access for browsing history (maybe it's for a reason, but I'm reluctant to install) 
+- and in general: web services change their UI, new services appear; it's a human  and  professional necessity for me to have a content-clearing tool that can be quickly adjusted
 <br/>
 <br/>
-- internet is the greatest thing humanity has created so far
+- internet is probably the greatest thing humanity has created so far
 - free open-minded people created a magical tool to make information accessible
 - saying 'internet' bad is the same as saying freedom is bad
 - but 'hey, let's do this, it will be amazing' eventually is pushed away by 'how do we maximize' and shove-selling
