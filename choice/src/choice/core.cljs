@@ -12,6 +12,6 @@
 
 (defn set-display
   [selector v]
-  (->
+  (some->
    (select-element selector)
    (set-element-display v)))

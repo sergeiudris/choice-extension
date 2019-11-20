@@ -7,7 +7,9 @@
   {;top ad
    :youtube.element.selector/top-ad "#masthead-ad"
    ; right ad
-   :youtube.element.selector/recommended "[page-subtype=\"home\"]"})
+   :youtube.element.selector/recommended "[page-subtype=\"home\"]"
+   :youtube.element.selector/guide-content "#guide-content"
+   })
 
 (comment
 
@@ -33,6 +35,7 @@
   []
   (do
     (set-display (-conf :youtube.element.selector/top-ad) "none")
+    (set-display (-conf :youtube.element.selector/guide-content) "none")
     (set-display (-conf :youtube.element.selector/recommended) "none")))
 
 (defn unmount
