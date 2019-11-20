@@ -11,6 +11,7 @@
 - and in general: web services change their UI, new services appear; it's a human  and  professional necessity for me to have a content-clearing tool that can be quickly adjusted
 <br/>
 <br/>
+
 - internet is probably the greatest thing humanity has created so far
 - free open-minded people created a magical tool to make information accessible
 - saying 'internet' bad is the same as saying freedom is bad
