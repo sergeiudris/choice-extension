@@ -1,5 +1,7 @@
 ## contributing
 
+- will be open to contributions from stage 5
+
 #### roadmap
 
 - [x] build extension with cljs
@@ -29,3 +31,15 @@
 
   - release it
   - with a mechanism for feedback
+  - maintain
+
+- [ ] stage 5
+
+  - step back, redesign
+  - build
+  - release
+
+- [ ] stage 6
+
+  - maintain
+
