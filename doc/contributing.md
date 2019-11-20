@@ -6,7 +6,7 @@
 - [x] first workable implementation for google youtube
 - [ ] use styles injection
 - [ ] repo backup
-- [ ] user style sutomization
+- [ ] user style customization
 
 
 #### stages
