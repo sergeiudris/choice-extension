@@ -1,7 +1,7 @@
 (ns choice.domain.github
   (:require [goog.dom :as dom]
             [goog.style :as style]
-            [choice.core :refer [set-display select-element]]))
+            [choice.core :refer [set-display select-element inject-style]]))
 
 
 (def -conf
@@ -36,17 +36,40 @@
   (style/setStyle aside #js {:display "initial"})
   (style/setStyle aside #js {:display "none"})
   
+  (def sheet "
+    *[aria-label=\"Explore\"] {
+        display: none;
+      }
+    ")
   
+  (inject-style sheet)
+  
+  js/document.title
 
   ;
   )
 
+#_(set-display (-conf :github.element.selector/dashboard) "initial")
+#_(set-display (-conf :github.element.selector/explore) "initial")
+
+(def sheet "
+  
+    *[aria-label=\"Explore\"] {
+        display: none;
+      }
+  
+    #dashboard {
+       display: none;
+    }
+  
+    ")
 
 (defn mount
   []
   (do
-    (set-display (-conf :github.element.selector/dashboard) "none")
-    (set-display (-conf :github.element.selector/explore) "none")))
+    (inject-style sheet)
+    #_(set-display (-conf :github.element.selector/dashboard) "none")
+    #_(set-display (-conf :github.element.selector/explore) "none")))
 
 (defn unmount
   []

@@ -15,3 +15,20 @@
   (some->
    (select-element selector)
    (set-element-display v)))
+
+(comment
+  
+  (def el (dom/createElement "style"))
+  (.. el -type)
+  
+  ;
+  )
+
+(defn inject-style
+  [style-str]
+  (let [el (dom/createElement "style")
+        head (-> (dom/getElementsByTagName "head") (aget 0))]
+    (do
+      (set! (.. el -type) "text/css")
+      (set! (.. el -innerHTML ) style-str)
+      (.appendChild head el))))

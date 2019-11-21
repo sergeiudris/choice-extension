@@ -5,12 +5,8 @@
             [choice.domain.youtube :as youtube]
             [choice.domain.google :as google]))
 
-
-(defn main
+(defn mount
   []
-  (prn "choice.content.main")
-  (prn "domain is " (getDomain js/location.href))
-
   (when (= "github.com" (getDomain js/location.href))
     (do
       (github/mount)
@@ -31,6 +27,11 @@
       (google/mount)
       (prn "mounted google"))))
 
+(defn main
+  []
+  (prn "choice.content.main")
+  (prn "domain is " (getDomain js/location.href))
+  (mount))
 
 (comment
 
