@@ -27,8 +27,8 @@
 (defn inject-style
   [style-str]
   (let [el (dom/createElement "style")
-        head (-> (dom/getElementsByTagName "head") (aget 0))]
+        parent (-> (dom/getElementsByTagName "body") (aget 0))]
     (do
       (set! (.. el -type) "text/css")
       (set! (.. el -innerHTML ) style-str)
-      (.appendChild head el))))
+      (.appendChild parent el))))

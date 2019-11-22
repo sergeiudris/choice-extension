@@ -1,7 +1,7 @@
 (ns choice.domain.youtube
   (:require [goog.dom :as dom]
             [goog.style :as style]
-            [choice.core :refer [set-display select-element]]))
+            [choice.core :refer [set-display select-element inject-style]]))
 
 (def -conf
   {;top ad
@@ -29,14 +29,31 @@
   ;
   )
 
+(def sheet "
+  
+    *[page-subtype=\"home\"] {
+        display: none !important;
+      }
+  
+    #masthead-ad {
+       display: none !important;
+    }
+  
+   #guide-content {
+       display: none !important;
+    }
+  
+    ")
+
 
 
 (defn mount
   []
   (do
-    (set-display (-conf :youtube.element.selector/top-ad) "none")
-    (set-display (-conf :youtube.element.selector/guide-content) "none")
-    (set-display (-conf :youtube.element.selector/recommended) "none")))
+    #_(set-display (-conf :youtube.element.selector/top-ad) "none")
+    #_(set-display (-conf :youtube.element.selector/guide-content) "none")
+    #_(set-display (-conf :youtube.element.selector/recommended) "none")
+    (inject-style sheet)))
 
 (defn unmount
   []
