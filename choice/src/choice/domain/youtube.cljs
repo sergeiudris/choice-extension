@@ -31,17 +31,30 @@
 
 (def sheet "
   
+  /* home page recommendations */
     *[page-subtype=\"home\"] {
         display: none !important;
       }
   
+  /* top add */
     #masthead-ad {
        display: none !important;
     }
   
+  /* left sidebar */
    #guide-content {
        display: none !important;
     }
+
+
+  /* bottom rigth recommendations */
+  #items {
+     display: none !important;
+  }
+  
+  #secondary {
+    display: none !important;
+  }
   
     ")
 
