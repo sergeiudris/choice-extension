@@ -10,27 +10,27 @@
   (when (= "github.com" (getDomain js/location.href))
     (do
       (github/mount)
-      (prn "mounted github")))
+      #_(prn "mounted github")))
 
   (when (= "www.youtube.com" (getDomain js/location.href))
     (do
       (youtube/mount)
-      (prn "mounted youtube")))
+      #_(prn "mounted youtube")))
 
   (when (= "www.thesaurus.com" (getDomain js/location.href))
     (do
       (thes/mount)
-      (prn "mounted thesaurus")))
+      #_(prn "mounted thesaurus")))
 
   (when (= "www.google.com" (getDomain js/location.href))
     (do
       (google/mount)
-      (prn "mounted google"))))
+      #_(prn "mounted google"))))
 
 (defn main
   []
-  (prn "choice.content.main")
-  (prn "domain is " (getDomain js/location.href))
+  #_(prn "choice.content.main")
+  #_(prn "domain is " (getDomain js/location.href))
   (mount))
 
 (comment
