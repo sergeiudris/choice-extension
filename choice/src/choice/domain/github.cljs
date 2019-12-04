@@ -61,6 +61,9 @@
     #dashboard {
        display: none;
     }
+    .js-yearly-contributions {
+            display: none;
+    }
   
     ")
 
