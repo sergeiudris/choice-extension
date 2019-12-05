@@ -1,7 +1,3 @@
-## contributing
-
-- will be open to contributions from stage 5
-
 #### roadmap
 
 - [x] build extension with cljs
