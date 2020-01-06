@@ -1,16 +1,15 @@
 
 - choice is intended to give the user a level of control over webpage content of certain domains
-- as a baseline, ability to hide unwanted page elements
 
 ## rationale
 
-- the idea is to hide destructing page elements on certain domains
+- the idea is to toggle page elements on certain domains
 - there are extensions specific to domains (google doodle blocker, youtube hide recommends etc.)
 - still it seems there is no multi-domain extension that would let you choose what is displayed (google,youtube, github, twitter, medium, stackoverflow etc.)
 - 'destruction free youtube' extension is not open source and asks access for browsing history (maybe it's for a reason, but I'm reluctant to install) 
 - and in general: web services change their UI, new services appear; content-clearing tool that can be quickly adjusted is needed
 
-## minimum viable product
+## mvp
 
 - hide google doodle
 - hide youtube destructions
